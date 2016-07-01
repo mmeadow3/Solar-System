@@ -10,10 +10,12 @@ const Earth = require('./earth');
 const Neptune = require('./neptune');
 const Mars = require('./mars');
 
-
-
- function outputTo(domElement) {
-  $('#planets').append(mars.name);
+// console.log("Mars")
+// console.log(Mars.name)
+function outputTo(domElement) {
+  $('#planets').append(`<div> ${Mars.name} is located near ${Mars.location} and has a population of ${Mars.population}</div>`);
+  $('#planets').append(`<div> ${Earth.name} is located near ${Earth.location} and has a population of ${Earth.population}</div>`);
+  $('#planets').append(`<div> ${Neptune.name} is located near ${Neptune.location} and has a population of ${Neptune.population}</div>`);
 }
 outputTo();
 
@@ -23,14 +25,13 @@ outputTo();
 let Earth = {};
 
 Earth.populate = function () {
+	this.name = "Earth";
+	this.population = 6000000;
+	this.location = "Earth";
+};
+Earth.populate();
 
-}
 
-
-
- function outputTo(domElement) {
-  $('#planets').append(Earth);
-}
 
 module.exports = Earth; 
 },{}],3:[function(require,module,exports){
@@ -39,17 +40,15 @@ module.exports = Earth;
 let Mars = {};
 	
 Mars.populate = function () {
-
-}
-Mars.populate.prototype.addName = function(name) {
-	this.name = "Mars"
+	this.name = "Mars";
+	this.population = 0;
+	this.location = "next to Earth";
 };
+Mars.populate(Mars);
 
-Mars.name = "mars"
+// console.log(Mars)
 
- function outputTo(domElement) {
-  $('#planets').append(Mars);
-}
+
 
 module.exports = Mars; 
 },{}],4:[function(require,module,exports){
@@ -58,10 +57,11 @@ module.exports = Mars;
 let Neptune = {};
 
 Neptune.populate = function () {
-	
-}
-
-
+	this.name = "Neptune";
+	this.population = 0;
+	this.location = "far from earth";
+};
+Neptune.populate(Neptune);
 
 
 

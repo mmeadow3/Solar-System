@@ -3,16 +3,14 @@
 let Mars = {};
 	
 Mars.populate = function () {
-
-}
-Mars.populate.prototype.addName = function(name) {
-	this.name = "Mars"
+	this.name = "Mars";
+	this.population = 0;
+	this.location = "next to Earth";
 };
+Mars.populate(Mars);
 
-Mars.name = "mars"
+// console.log(Mars)
 
- function outputTo(domElement) {
-  $('#planets').append(Mars);
-}
+
 
 module.exports = Mars; 
