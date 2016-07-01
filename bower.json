@@ -1,0 +1,13 @@
+{
+  "name": "mike",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Mike Meadows <mmeadow33@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mmeadow3/Solar-System",
+  "dependencies": {
+    "jquery": "^3.0.0"
+  }
+}
